@@ -20,6 +20,10 @@
   "homepage": "https://github.com/danahAlajmi/Foodies-BE#readme",
   "dependencies": {
     "cors": "^2.8.5",
+<<<<<<< HEAD
+    "express": "^4.18.1",
+=======
+>>>>>>> 4b76a398902cbacc5d7a686bdb353f914d0cf442
     "mongoose": "^6.3.5"
   }
 }
