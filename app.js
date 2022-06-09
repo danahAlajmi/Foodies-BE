@@ -1,11 +1,17 @@
 const express = require("express");
 const connectDb = require("./database");
 const app = express();
+const cors = require("cors");
+const recipeRoutes = require("./api/recipe/recipe.routes");
 
 //////////////
 connectDb();
 
 app.use(express.json());
+app.use(cors());
+
+//routers
+app.use("/recipe", recipeRoutes);
 
 //middlewares
 app.use((req, res, next) => {
