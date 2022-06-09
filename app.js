@@ -3,11 +3,12 @@ const connectDb = require("./database");
 const app = express();
 const CategoryRoutes = require("./api/category/cat.routes");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 //////////////
 connectDb();
-
 app.use(express.json());
+app.use(cors());
 app.use("/Category", CategoryRoutes);
 
 //Not Found Middleware
