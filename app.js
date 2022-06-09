@@ -1,7 +1,7 @@
 const express = require("express");
 const connectDb = require("./database");
 const app = express();
-const cors = require("cors");
+
 const ingredientRoutes = require("./api/ingredients/ingredientRoute");
 const CategoryRoutes = require("./api/category/cat.routes");
 const mongoose = require("mongoose");
