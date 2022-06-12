@@ -21,11 +21,11 @@ exports.ingredientCreate = async (req, res, next) => {
   }
 };
 
-// exports.ingredientGet = async (req, res) => {
-//   try {
-//     const ingredients = await Ingredient.find();
-//     res.json(ingredients);
-//   } catch (error) {
-//     next(error);
-//   }
-// };
+exports.ingredientGet = async (req, res) => {
+  try {
+    const ingredients = await Ingredient.find();
+    res.json(ingredients);
+  } catch (error) {
+    next(error);
+  }
+};

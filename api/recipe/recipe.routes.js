@@ -3,9 +3,8 @@ const express = require("express");
 
 const router = express.Router();
 
-const { recipeGet, creatRecipe } = require("./recipe.controllers");
+const { recipeGet } = require("./recipe.controllers");
 
 router.get("/", recipeGet);
-router.post("/", creatRecipe);
 
 module.exports = router;

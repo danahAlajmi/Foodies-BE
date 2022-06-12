@@ -9,11 +9,11 @@ exports.recipeGet = async (req, res, next) => {
   }
 };
 
-exports.creatRecipe = async (req, res, next) => {
-  try {
-    const newRecipe = await Recipe.create(req.body);
-    res.status(201).json(newRecipe);
-  } catch (error) {
-    next(error);
-  }
-};
+// exports.creatRecipe = async (req, res, next) => {
+//   try {
+//     const newRecipe = await Recipe.create(req.body);
+//     res.status(201).json(newRecipe);
+//   } catch (error) {
+//     next(error);
+//   }
+// };
