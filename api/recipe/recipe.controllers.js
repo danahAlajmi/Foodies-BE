@@ -14,6 +14,16 @@ exports.recipeGet = async (req, res, next) => {
   }
 };
 
+<<<<<<< HEAD
+// exports.creatRecipe = async (req, res, next) => {
+//   try {
+//     const newRecipe = await Recipe.create(req.body);
+//     res.status(201).json(newRecipe);
+//   } catch (error) {
+//     next(error);
+//   }
+// };
+=======
 exports.creatRecipe = async (req, res, next) => {
   const { categoryId } = req.params;
   req.body.category = categoryId;
@@ -28,3 +38,4 @@ exports.creatRecipe = async (req, res, next) => {
     next(error);
   }
 };
+>>>>>>> a3e455868ae5d2712711c178fa6e3626c91e37d2

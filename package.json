@@ -21,9 +21,14 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
+<<<<<<< HEAD
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5"
+=======
     "mongoose": "^6.3.5",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0"
+>>>>>>> a3e455868ae5d2712711c178fa6e3626c91e37d2
   }
 }

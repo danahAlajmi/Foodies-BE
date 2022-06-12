@@ -3,7 +3,7 @@ const router = express.Router();
 const {
   //   fetchIngredient,
   ingredientCreate,
-  //   ingredientGet,
+  ingredientGet,
 } = require("./ingredientController");
 
 // router.param("ingredientId", async (req, res, next, ingredientId) => {
@@ -22,6 +22,6 @@ router.post("/", ingredientCreate);
 
 // router.get("/:ingredientId", fetchIngredient);
 
-// router.get("/:RecipeId/ingredients", ingredientGet);
+router.get("/", ingredientGet);
 
 module.exports = router;

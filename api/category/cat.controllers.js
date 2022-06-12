@@ -27,10 +27,14 @@ exports.fetchCategory = async (name, next) => {
 
 exports.CategoryGet = async (req, res) => {
   try {
+<<<<<<< HEAD
+    const categories = await Category.find().populate("recipes");
+=======
     const categories = await Category.find(
       {},
       "-createdAt -updatedAt"
     ).populate("recipes");
+>>>>>>> a3e455868ae5d2712711c178fa6e3626c91e37d2
     res.json(categories);
   } catch (error) {
     res.status(500).json({ message: error.message });

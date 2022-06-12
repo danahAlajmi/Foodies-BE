@@ -3,9 +3,12 @@ const express = require("express");
 
 const router = express.Router();
 
-const { recipeGet, creatRecipe } = require("./recipe.controllers");
+const { recipeGet } = require("./recipe.controllers");
 
 router.get("/", recipeGet);
+<<<<<<< HEAD
+=======
 router.post("/:categoryId/recipe", creatRecipe);
+>>>>>>> a3e455868ae5d2712711c178fa6e3626c91e37d2
 
 module.exports = router;
