@@ -3,6 +3,14 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET, JWT_EXP } = require("../../secret/keys");
 
+exports.fetchUser = async (userId, next) => {
+  try {
+    const user = await User.findById(userId);
+    return user;
+  } catch (error) {
+    next(error);
+  }
+};
 exports.signUp = async (req, res, next) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -31,7 +39,7 @@ exports.signIn = async (req, res) => {
 
 exports.getUsers = async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await User.find({}, "-createdAt -updatedAt");
     res.status(201).json(users);
   } catch (err) {
     res.status(500).json("Server Error");

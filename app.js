@@ -19,18 +19,14 @@ app.use(cors());
 app.use(passport.initialize());
 passport.use(localStrategy);
 passport.use(jwtStrategy);
+
 //routers
 app.use("/recipe", recipeRoutes);
 app.use("/user", userRoutes);
-app.use("/Category", CategoryRoutes);
-
-//ROUTES
-app.use(cors());
+app.use("/category", CategoryRoutes);
 app.use("/ingredients", ingredientRoutes);
 
 //middlewares
-//routers
-app.use("/recipe", recipeRoutes);
 
 //Not Found Middleware
 app.use((req, res, next) => {
