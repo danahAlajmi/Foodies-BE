@@ -1,4 +1,4 @@
-const Category = require("../../models/category");
+const Category = require("../../models/Category");
 
 //create a category
 exports.CreateCategory = async (req, res) => {
@@ -27,7 +27,10 @@ exports.fetchCategory = async (name, next) => {
 
 exports.CategoryGet = async (req, res) => {
   try {
-    const categories = await Category.find();
+    const categories = await Category.find(
+      {},
+      "-createdAt -updatedAt"
+    ).populate("recipes");
     res.json(categories);
   } catch (error) {
     res.status(500).json({ message: error.message });
